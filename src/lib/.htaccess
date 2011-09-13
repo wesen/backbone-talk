@@ -1,0 +1,7 @@
+order allow,deny
+deny from all
+
+php_value include_path "../"
+
+php_flag engine off
+

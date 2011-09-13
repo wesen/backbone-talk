@@ -1,0 +1,20 @@
+{{#templates}}
+  <script type="text/html" id="{{name}}">
+    {{&content}}
+  </script>
+{{/templates}}
+
+<!-- initialize mustache.js variables -->
+<script type="text/javascript">
+  var tplBaseData = {
+  "path_images": "{{path_images}}",
+
+  "site": "{{site}}",
+  "request_uri": "{{request_uri}}",
+  };
+  var site = tplBaseData.site;
+</script>
+
+{{#js}}
+<script type="text/javascript" src="{{path_js}}{{.}}.js"></script>
+{{/js}}

@@ -13,3 +13,9 @@
 [submodule "vendor/php-restserver"]
 	path = vendor/php-restserver
 	url = http://github.com/wesen/php-restserver.git
+[submodule "vendor/Proust"]
+	path = vendor/Proust
+	url = http://github.com/wesen/proust.git
+[submodule "vendor/limonade"]
+	path = vendor/limonade
+	url = http://github.com/wesen/limonade.git

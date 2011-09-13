@@ -1,0 +1,5 @@
+RewriteEngine On
+Options -Indexes -MultiViews
+RewriteBase /backbone
+
+RewriteRule ^(.*)$ dispatch.php [NC,L,QSA,env=URI:$1]
