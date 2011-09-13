@@ -64,7 +64,7 @@ App.Views.templateView = Backbone.View.extend({
     var that = this;
 
     options = options || {};
-    elt.fancybox($.extend({}, 
+    elt.fancybox($.extend({},
                           {type: 'deferred',
                            promise: promise,
                            width: 'auto',
