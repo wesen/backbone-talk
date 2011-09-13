@@ -315,7 +315,7 @@ $.fn.updateToggle = function () {
     if (!($prev = $this.data("inputToggled"))) {
       continue;
     }
-    
+
     /* if it's a select list, use the text value of the selected option instead of the value. */
     var newVal = $this.val();
     if ($this.is("select")) {
@@ -336,7 +336,7 @@ $.fn.cancelToggle = function () {
   for (var i = 0, j = this.length; i < j; i++) {
     var $this = $(this[i]);
     var $prev;
-    
+
     if (!($prev = $this.data("inputToggled"))) {
       continue;
     }
@@ -355,11 +355,11 @@ $.fn.selectToggle = function () {
   for (var i = 0, j = this.length; i < j; i++) {
     var $this = $(this[i]);
     var $prev;
-    
+
     if (!($prev = $this.data("inputToggled"))) {
       continue;
     }
-    
+
     /* hide other input toggles */
     $(".inputToggle").not($this).cancelToggle();
     $prev.hide();
@@ -385,7 +385,7 @@ $.fn.makeInputToggle = function () {
     /* click on the previous text span or element */
     $this.hide();
 
-    $prev.wrap('<a href="#"/></a>').click(function () {
+    $prev.click(function () {
       $this.selectToggle();
       return false;
     });
@@ -395,7 +395,7 @@ $.fn.makeInputToggle = function () {
       $this.cancelToggle();
       return false;
     });
-    
+
     if ($this.is(":text-field")) {
       /* if input is a text input, check for enter/escape or tab key */
       $this.keydown(function (l) {
@@ -411,7 +411,7 @@ $.fn.makeInputToggle = function () {
 
         return true;;
       });
-    } 
+    }
 
     $this.change(function () {
       $this.updateToggle();
@@ -433,7 +433,7 @@ $.fn.makeInputToggle = function () {
       }
       return true;
     });
-    
+
     $this.data("inputToggled", $prev);
   });
 };
