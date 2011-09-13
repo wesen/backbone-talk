@@ -42,11 +42,20 @@ $.fn.findInParentElt = function (parentSelector, selector) {
  **/
 $.fn.replaceLinks = function () {
   if (SINGLE_PAGE_APP) {
-    $(this).children('a')
+    $(this).find('a')
       .each(function(idx, elt) {
         $(elt).attr("href", function (i, attr) {
           if (attr) {
-            var res = attr.replace(tplBaseData.origSite, "#").replace(/\.php$/, "");
+            if (attr.match(/^#/) || attr.match('/^http')) {
+              return attr;
+            }
+            attr = attr.replace(/\.(php|html)$/, "");
+
+            if (!attr.match(/^\//)) {
+              return '#' + attr;
+            }
+
+            var res = '#' + attr.replace(tplBaseData.origSite, '');
             return res;
           } else {
             return undefined;
