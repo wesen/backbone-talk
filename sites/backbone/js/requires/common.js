@@ -19,9 +19,11 @@
 
 /** models **/
 //= require "models/testimonial"
+//= require "models/blog"
 
 /** views **/
 //= require "views/mainView"
+//= require "views/blogView"
 
 /** main **/
 //= require "main"
