@@ -4,9 +4,6 @@
 [submodule "vendor/backbone"]
 	path = vendor/backbone
 	url = http://github.com/wesen/backbone.git
-[submodule "vendor/mustache.js"]
-	path = vendor/mustache.js
-	url = http://github.com/wesen/mustache.js.git
 [submodule "vendor/underscore"]
 	path = vendor/underscore
 	url = http://github.com/wesen/underscore.git
@@ -19,3 +16,6 @@
 [submodule "vendor/limonade"]
 	path = vendor/limonade
 	url = http://github.com/wesen/limonade.git
+[submodule "vendor/js/mustache"]
+	path = vendor/js/mustache
+	url = http://github.com/wesen/mustache.js.git
