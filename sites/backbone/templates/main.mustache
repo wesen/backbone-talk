@@ -112,20 +112,25 @@
               <p>At rutrum nunc ante in orci. Integer quis odio a massa dignissim sollicitudin eget quis leo. Etiam a mi dolor, nec vestibulum erat. Aliquam eget elit nibh, at egestas massa. Ut pharetra consequat justo, non hendrerit quam tristique pharetra. Praesent est justo, congue commodo malesuada ac, fermentum ut odio. Pellentesque sit amet eleifend nibh. <a href="#">Read More</a></p>
 
             </article>
+
             <h2>Latest From The Blog</h2>
+            <article>
+            {{#blogs}}
+              <h3>{{title}}</h3>
+              <p>{{text}}</p>
+            {{/blogs}}
+            </article>
 
           </section>
           <section id="sidebar">
             <h2>Testimonials</h2>
             <article class="testimonials">
+              {{#testimonials}}
               <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer egestas purus bibendum neque aliquam ut posuere elit semper. Fusce sagittis pharetra eros, sit amet consequat sem mollis vitae. </p>
-                <cite>John Doe, New York City</cite>
+                <p>{{text}}</p>
+                <cite>{{author}}, {{city}}</cite>
               </blockquote>
-              <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer egestas purus bibendum neque aliquam ut posuere elit semper. Fusce sagittis pharetra eros, sit amet consequat sem mollis vitae. </p>
-                <cite>John Doe, New York City</cite>
-              </blockquote>
+              {{/testimonials}}
             </article>
           </section>
 
@@ -134,55 +139,6 @@
       </div>
     </section>
   </div>
-  <footer id="pagefooter">
-    <div id="bottom">
-      <div class="block1">
-        <h2>Meet The Team</h2>
 
-        <div class="teamimg">
-
-
-          <div class="imgthmb">
-            <img src="{{path_images}}team5.jpg" width="65" height="65" alt="team"></div>
-          <div class="imgthmb">
-            <img src="{{path_images}}team1.jpg" width="65" height="65" alt="team"></div>
-          <div class="imgthmb">
-            <img src="{{path_images}}team2.jpg" width="65" height="65" alt="team"></div>
-          <div class="imgthmb">
-            <img src="{{path_images}}team4.jpg" width="65" height="65" alt="team"></div>
-          <div class="imgthmb">
-            <img src="{{path_images}}team2.jpg" width="65" height="65" alt="team"></div>
-          <div class="imgthmb">
-            <img src="{{path_images}}team1.jpg" width="65" height="65" alt="team"></div>
-        </div>
-      </div>
-      <div class="block2">
-        <h2>Latest Project</h2>
-        <div class="projectthmb"> <a href="portfolio"><img src="{{path_images}}latstproject.jpg" width="240" height="150" alt="project"></a></div>
-
-      </div>
-      <div class="block3">
-
-        <h2>More About</h2>
-        <p>PROFESSIONAL PORTFOLIO is a Template suitable for Businesses, Web Design Firms or any I.T related company that require a place to showcase their works.
-          This template is released under Creative Commons Attribution License. </p>
-
-      </div>
-      <div class="clear"></div>
-    </div>
-    <div id="credits">
-      <p>
-        <span class="copyright">
-          &copy; 2010 | Your Company Name |  All Rights Reserved | Professional Portfolio is a CSS Template relealsed by CSSHeaven</span>
-        <span id="designcredit">
-          <!--Creative Common Non-Commercial, Attribution License
-              Designed by : Roshan Ravi
-              Author URI : cssheaven.org
-              Do Not Remove this Credits and Link back to CSSHeaven from the template-->
-          <a href="http://cssheaven.org" title="Free CSS Website Template by CSSHeaven">Website Template</a>
-          <!--Design Credits--> by CSSHeaven.org </span>
-      </p>
-    </div>
-  </footer>
-
+  {{>footer}}
 </section>
