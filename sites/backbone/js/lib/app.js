@@ -8,21 +8,8 @@
 
 var basePageData = {};
 
-var SINGLE_PAGE_APP = false;
-
 var App = {
-  Views: {
-    Member: {},
-    Admin: {
-      Elements: {
-      },
-      Popups: {
-      }
-    },
-    Misc: {},
-    Cart: {},
-    Checkout: {}
-  },
+  Views: {},
   Collections: {},
   Controllers: {},
   Data: {},
@@ -139,4 +126,3 @@ function parseJSONResults(res, dfd) {
                           msg: "Unknown JSON answer"}]});
   }
 }
-
