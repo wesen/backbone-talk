@@ -5,6 +5,7 @@
 //= require "vendor/ICanHaz/ICanHaz-no-mustache.min"
 //= require "vendor/underscore/underscore-min"
 //= require "vendor/backbone/backbone-min"
+//= require "vendor/loopedslider.min"
 
 /** helpers **/
 //= require "lib/helpers"
@@ -14,3 +15,13 @@
 /** app definition **/
 //= require "lib/app"
 //= require "lib/templateView"
+
+
+/** models **/
+//= require "models/testimonial"
+
+/** views **/
+//= require "views/mainView"
+
+/** main **/
+//= require "main"
