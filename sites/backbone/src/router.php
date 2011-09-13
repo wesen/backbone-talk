@@ -12,6 +12,7 @@ class Backbone {
      *
      ***************************************************************************/
 
+    dispatch_get('/templates/**', 'handle_templates');
     dispatch_all('/rest/**', 'handle_rest_server');
     dispatch_static_dir('/resource/images', SITE_RESOURCE_DIR.'/images');
     dispatch_static_dir('/resource', Configuration::GetConfig('paths.assets_dir', SITE_DIR.'/assets'));
