@@ -30,6 +30,16 @@ class MongoRest {
     return $this->filterObj($res);
   }
 
+  public function createSingle($name, $data = array()) {
+    $collection = $this->db->$name;
+    $res = $collection->insert($data);
+    if ($res) {
+      return $this->filterObj($data);
+    } else {
+      return null;
+    }
+  }
+
   public function updateItem($name, $filter = array(), $update = array()) {
     unset($update["id"]);
     $collection = $this->db->$name;
