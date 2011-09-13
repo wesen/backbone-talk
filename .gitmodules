@@ -1,6 +1,3 @@
-[submodule "vendor/ICanHaz"]
-	path = vendor/ICanHaz
-	url = http://github.com/wesen/ICanHaz.js.git
 [submodule "vendor/php-restserver"]
 	path = vendor/php-restserver
 	url = http://github.com/wesen/php-restserver.git
@@ -19,3 +16,6 @@
 [submodule "vendor/js/underscore"]
 	path = vendor/js/underscore
 	url = http://github.com/wesen/underscore.git
+[submodule "vendor/js/ICanHaz"]
+	path = vendor/js/ICanHaz
+	url = http://github.com/wesen/ICanHaz.js.git
